@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UiTM Perlis Harumanis Mangoes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>UiTM Perlis Harumanis Mangoes</h1>
+        <nav>
+            <ul>
+                <li><a href="#index"><img src="harummaniss.png" alt= "Logo" class="nav-logo"></a></li>
+                <li><a href="#about">Harumanis</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#order">Order Now</a></li>
+                <li><a href="#index"><img src="harummaniss.png" alt= "Logo" class="nav-logo"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Harumanis Mangoes</h2>
+            <img src="treemango.jpg" alt= "image" class="image"></a>
+            <p>Harumanis mangoes are a premium variety grown in Perlis, Malaysia, celebrated for their unique sweetness, aromatic flavor, and luscious texture.</p>
+        </section>
+
+        <section id="benefits">
+            <h2>Benefits of Harumanis Mangoes</h2>
+            <ul>
+                <li>Rich in vitamins A and C for improved immunity.</li>
+                <li>Contains natural antioxidants for skin health.</li>
+                <li>Boosts digestion with fiber content.</li>
+                <li>Low in calories, making it a healthy snack.</li>
+            </ul>
+        </section>
+
+        <section id="order">
+            <br><br>
+            <div class="order-header">
+                <h2>Grab Your Harumanis TODAY</h2>
+            </div>
+            <div class="form-receipt-container">
+                <form id="orderForm" onsubmit="return generateReceipt();">
+                    <br><br>
+                    <div class="promo-header">
+                        <h3>PROMO: RM 10 per kg</h3>
+                    </div>
+        
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="quantity">Quantity (kg):</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+        
+                    <label for="address">Delivery Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+        
+                    <label for="phone">Contact Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+        
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="payment">Payment Method:</label>
+                    <select id="payment" name="payment" required>
+                        <option value="cash">Cash on Delivery</option>
+                        <option value="online">Online Transfer</option>
+                    </select>
+        
+                    <button type="submit">Place Order</button>
+                </form>
+
+                <div id="receipt">
+                    <h3>Order Receipt</h3>
+                    <p id="receipt-name"></p>
+                    <p id="receipt-quantity"></p>
+                    <p id="receipt-address"></p>
+                    <p id="receipt-phone"></p>
+                    <p id="receipt-email"></p>
+                    <p id="receipt-payment"></p>
+                    <p id="receipt-total"></p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <br>
+    <footer>
+        <p id="current-date-time">Loading current date and time...</p>
+        <p>&copy; 2025 UiTM Perlis [by Athirah]. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
